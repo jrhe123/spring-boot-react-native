@@ -1,0 +1,51 @@
+IDE:
+
+format code:
+command + option + L
+
+search code:
+command + shift + f
+
+auto import:
+option + enter
+
+
+微信公众号:
+
+
+Repository:
+
+- JPA Generic
+save
+saveAll
+findById
+existsById
+findAll
+findAllById
+count
+deleteById
+delete
+deleteAll
+
+- Half Custom
+Optional<User> findByUsername(String username);
+Optional<User> findByName(String name);
+Optional<User> findByPassword(String password);
+void deleteByName(String name);
+void deleteByPassword(String password);
+void deleteByUsername(String username);
+
+- Custom
+@Query("select max(id) from user")
+Long findMaxId();
+
+@Query("select u.name from User u where u.id in (:pIdList)")
+List<String> findByIdList(@Param("pIdList") List<Long> idList);
+
+@Modifying
+@Query("delete from User u where u.name = :name")
+void deleteCustomName(@Param("name") String name);
+
+@Modifying
+@Query("update table User u set u.name = :name")
+void updateCustomName(String name)
