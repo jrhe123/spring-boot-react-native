@@ -5,6 +5,7 @@ Backend:
 - Spring security
 - JWT
 - Lombok
+- Pagination
 - Liquibase DB migrate
 - Stripe
 - Gradle.build
